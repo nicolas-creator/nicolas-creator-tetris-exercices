@@ -1,0 +1,26 @@
+/*Exercice 1:
+Soit un code html contenant deux liens :
+<a href="http://www.exelib.net/exercices/developpement-web/html/">Exercices HTML</a>
+<a href="http://www.exelib.net/exercices/programmation/langage-c/">Exercices C</a>
+Utiliser les pseudo classes ":hover" ":visited" ":active" dans l'ordre convenable afin de définir l'apparence des liens comme suit :
+* Les liens survolés: non soulignés avec un background  "#7E3661" et une couleur de texte blanche.
+* Les liens visités : avec une couleur de texte égale à "#FCB941"
+* Les liens (état cliqué) : avec une taille de 1.5em
+Exercice 2:
+/*Travail à faire :
+
+Le résultat à obtenir est présenté dans le fichier resultat.png*/
+/************************   EXERCICE 1    *********************************************/
+a:hover{
+    text-decoration:none;
+    background-color:#7E3661;
+    color:white;
+}
+a:active
+{
+    font-size: 1.5em;
+}
+a:visited{
+        
+    color:#FCB941;        
+}

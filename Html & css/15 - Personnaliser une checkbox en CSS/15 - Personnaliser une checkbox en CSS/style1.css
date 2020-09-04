@@ -1,0 +1,55 @@
+/*Utiliser La balise <label> qui  vous permet de traiter  le clic sur l'étiquette, comme un clic sur la "checkbox". Il existe deux façons de créer cette association :
+* Enveloppez le checkbox par le label
+* Associer le label avec le checkbox grâce à l'attribut "for".*/
+/*checkbox*/
+
+/*label{ opacity: initial;
+       display: block;
+       width: 100px;
+       height:40px;       
+}
+#switch ~ label::before{
+
+    transition:0.3s linear;
+    display: block;
+    border-radius: 20px;
+    width:100px;
+    height:50px; 
+    background-color:#2dcb70;
+    color:white;
+    font-size: 30px;
+    padding-left: 10px;
+    content:"oui";
+
+}
+#switch ~ label::before{
+
+    transition:0.3s linear;
+    display: block;
+    border-radius: 20px;
+    width:100px;
+    height:50px; 
+    background-color:red;
+    color:white;
+    font-size: 30px;
+     padding-left: 10px;
+    content:"non";
+}
+
+.bouton::after{
+    transition:0.3s linear;
+    position: absolute;
+    content:" ";
+    border:solid 12px;
+    border-radius:50%;
+    margin-top:-27px;
+    margin-left:48px;    
+}
+#switch ~ label bouton::after{
+    transform:translatex(72px) ; 
+    
+}
+#switch{ opacity:0;
+
+}*/
+/***********************************/

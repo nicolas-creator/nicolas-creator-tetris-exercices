@@ -1,0 +1,31 @@
+
+
+/* Un retrait gauche de 20px pour tous les paragraphes 
+descendants de la classe "article".*/
+div[class="article"]{
+          margin-left: 20px;
+          
+}
+/*Une bordure noir et solide pour les paragraphes adjacents
+du titre "h2".*/
+div>p{
+    border:1px solid black;
+    width: 400px;
+    height: 20px;
+    color:black;
+    padding-left: 10px;
+}
+/** Une couleur verte pour les paragraphes fils des éléments 
+"li".*/
+
+li> p{
+    color: green;
+
+}
+/* background de couleur jaune
+ pour  les paragraphes frères directs du titre "h2" (qui
+ se trouvent immédiatement après h2, et non pas en dessous).*/
+h2+p{
+    background-color:yellow;
+
+}

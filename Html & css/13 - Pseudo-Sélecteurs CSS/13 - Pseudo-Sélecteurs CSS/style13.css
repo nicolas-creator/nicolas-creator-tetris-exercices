@@ -1,0 +1,95 @@
+
+header{
+    font-family: Arial;
+}
+header nav {
+          color:#ffffff;
+}
+header nav ul{
+           list-style: none;
+           margin: 0;
+           padding: 0;
+}
+header nav ul li {
+                  margin: 0;
+                  padding:0;
+                  float: left;
+                  width: 200px;
+                  height: 40px;
+                  background-color: rgba(0,0,0,0.8);
+                  line-height:40px;
+                  text-align: center;
+
+} 
+header nav ul li a{
+
+                   display: block;
+
+} 
+header nav ul li a:hover{
+                         background-color:black;
+                         opacity:0.5; 
+}
+header nav ul li ul li{
+                transition:background-color  3s  linear;
+                display: none;
+
+}
+
+header nav ul li:hover ul li{
+
+                           display: block;
+
+
+}
+header nav ul li ul :hover li  {
+  background-color:black;
+  opacity:0.5; 
+
+}
+caption{
+    font-size: 1.5em;
+    text-transform: capitalize;
+}
+table{
+    margin-right: 400px;
+    margin-left: 400px;
+        height: 400px;
+    width: 500px;
+    border: none;
+}
+th td{
+    text-align: center;
+    padding: 10px;
+}/*****la deuxième balise "th" de la première "tr"*/
+thead>tr:first-child>th:nth-child(2){
+    color: blue;
+    font-size: 2em;
+}
+tbody> tr:nth-child(odd)>td:first-child{
+    background-color: #7E3661;
+    color : white;
+}
+tbody> tr:nth-child(even)>td:first-child{
+    background-color: grey ;
+    color : white;
+}
+tbody> tr:nth-child(odd) > td{
+    background-color: #F1654C;
+}
+tbody > tr> td:last-child { 
+    background-color: #8870FF;}
+
+tbody> tr:nth-child(even) > td{
+    background-color: orange;
+}
+/*Enlever la bordure droite et la bordure du haut, de la dernière cellule "th" qui possède un attribut "rowspan" (utiliser
+le pseudo classe "last-child' et un sélecteur d'attribut pour "rowspan".*/
+th:last-child {
+    border-top: none;
+    border-right: none;
+
+}
+tbody >tr > td[rowspan] {
+    color: white;
+}
