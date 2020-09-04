@@ -1,0 +1,70 @@
+* {
+	font-family: 'Arvo' ;
+  transition-duration: 0.2s
+}
+
+.title{
+	display: flex ;
+	justify-content: center ;
+}
+
+.content{
+	display: flex;
+	justify-content: center ;
+}
+
+.image{
+
+	background-image: url("corps.png") ;
+  background-position: center;
+	background-repeat: no-repeat ;
+	width: 139px ;
+	height: 498px ;
+  margin-top: 10em;
+  margin-left: 480px;
+}
+a
+{
+     opacity:0.5;
+     border: 18px solid grey;
+     border-radius: 50%;
+    opacity:0.4;
+     transition-duration: 0.1s;
+     cursor: pointer;
+     position: relative;
+}
+a:hover
+{
+  border-color:red;
+  opacity: 0.3;
+}
+.epaule
+{
+left: 488px;
+bottom:397px;
+}
+.bras
+{
+left: 551px;
+bottom: 316px;
+}
+.main
+{
+left:403px ;
+bottom: 256px;
+}
+.hanche
+{
+  left:454px ;
+  bottom:261px ;
+}
+.jambe
+{
+  left:368px ;
+  bottom: 119px;
+}
+.pied
+{
+  left: 376px;
+  bottom: 50px;
+}

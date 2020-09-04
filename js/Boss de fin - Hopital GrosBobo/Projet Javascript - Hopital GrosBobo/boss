@@ -1,0 +1,91 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" href="style.css">
+
+
+<title>boss</title>
+
+
+
+</head>
+<body>
+
+<section>
+<h1>Le Corps Humain</h1>
+
+
+
+<input type="button" class="pied"onclick="maFonction('pied')">
+<input type="button" class="genoux"onclick="maFonction('genoux')">
+<input type="button" class="hanche" onclick="maFonction('hanche')">
+<input type="button" class="poignée"onclick="maFonction('poignet')">
+<input type="button" class="coude" onclick="maFonction('coude')">
+<input type="button" class="epaule"onclick="maFonction('epaule')">
+
+<div><img src="corps.png" alt="" /></div>
+<div>
+ <div id="pied" style="display:none;">
+  <h2>pied</h2>
+<p>Le pied est la partie distale du membre inférieur de l'homme.
+Il est relié à la jambe par l'articulation de la cheville.
+Il supporte le poids du corps en position</p>
+</div>
+
+<div  id="genoux"  >
+  <h2>genou</h2>
+<p>Le genou (du latin geniculum) est l’articulation qui relie
+  la cuisse à la jambe.
+Elle permet les mouvements d’allongement et de fléchissement
+des membres inférieurs.</p>
+</div>
+
+<div id="hanche">
+  <h2>hanche </h2>
+<p id="hanche">La hanche ou articulation coxo-fémorale est une
+articulation (sphéroïde) qui permet
+de joindre la cuisse au bassin. Elle met en jeu deux os :
+l'os coxal et le fémur.</p>
+</div>
+
+<div id="poignée">
+  <h2>poignée </h2>
+<p>Extrait optimisé sur le Web
+Une poignée est une partie d'un objet, ou un autre objet attaché au
+premier, servant à le déplacer ou l'utiliser avec la main.</p>
+</div>
+
+<div id="coude">
+    <h2>coude </h2>
+<p>Le coude (ou articulation olécranienne) est la partie du membre supérieur
+située entre le bras et l'avant-bras. Cette articulation
+comprend en avant la région du « pli du coude » (ou fosse cubitale).</p>
+</div>
+
+<div id="epaule">
+  <h2>epaule </h2>
+<p>L'épaule est un complexe articulaire constitué de 4 articulations
+: l'articulation gléno-humérale relie l'os du bras (l'humérus) à la glène de
+l'omoplate, elle a un rôle majeur dans la fonction du bras</p>
+</div>
+</div>
+</section>
+<script type="text/javascript" src="lib.js">
+function maFonction() {
+  var div = document.getElementById("maDIV");
+  if (div.style.display === "none") {
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+/* ====================================
+   CSS setup ��ne rien modifier
+   �diter plus bas
+ * ==================================== */
+
+body { margin: 0; padding: 0; border: 0; }
+ul { list-style: none; padding: 0; margin: 0; height: 100px; }
+li { background-color: lightgrey; text-align: center; }
+li:nth-of-type(5n+1) { background-color: #1abc9c; }
+li:nth-of-type(5n+2) { background-color: #3498db; }
+li:nth-of-type(5n+3) { background-color: #9b59b6; }
+li:nth-of-type(5n+4) { background-color: #e67e22; }
+li:nth-of-type(5n) { background-color: #e74c3c; }
+a { color: white; font-size: 16px; line-height: 50px; text-decoration: none; }
+
+/* ====================================
+   �diter � partir d'ici
+ * ==================================== */
+
+ ul{
+   display: grid;
+   height:50px;
+  }
+  @media screen and (min-width:600px){
+                                       ul{ grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                                        margin-top: 50px;
+                                     }
+  li:hover{
+            margin:-30px -10px -30px -10px;
+            padding: 30px 10px 30px 10px;
+            z-index:1;
+          }
+     @media screen and (max-width:600px){
+        li{    display: grid;
+               grid-template: 1fr 1fr 1fr 1fr 1fr/1fr;
+               height:50px;
+          }
+                            }
