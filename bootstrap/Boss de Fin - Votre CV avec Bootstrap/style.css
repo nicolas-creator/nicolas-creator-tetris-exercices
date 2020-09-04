@@ -1,0 +1,40 @@
+
+
+.carousel-inner img{
+  height: 350px;
+
+
+}
+
+.rounded-55{
+  background-color: #489FB5;
+}
+.rounded-0{
+       background-image: radial-gradient(circle at center,#F900E6, #61D2E4,#037290);
+  }
+
+  .rounded-5{
+    background-color: #66680C;
+  }
+
+    .rounded-4{
+      background-color: #000000;
+    }
+
+      .rounded-3{
+        background-color: #FF4800;
+      }
+
+    .rounded-69  {
+
+           background-image: radial-gradient(circle at center, #251C46, #61D2E4,#037290);
+
+
+      }
+      .btn{
+      color:white;
+  }
+  .btn:hover{
+      color:white;
+       background-image: radial-gradient(circle at center, #251C46, #61D2E4,#037290);
+  }

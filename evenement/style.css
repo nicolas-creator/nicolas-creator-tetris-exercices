@@ -1,0 +1,112 @@
+*{
+    
+}
+body {
+    background-image: url("index.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+h1{
+    position: relative;
+    font-size: 50px;
+    width:400px;
+    top:20px;
+    left:10em;
+    /*background:*//
+    text-align: center;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    
+}
+h2{
+    position: relative;
+    font-size: 30px;
+    text-align: center;
+    width:600px;
+    top:20px;
+    left:14em;
+    /*background: rgba(0, 0, 0, 0.52);*/
+    text-align: center;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    
+}
+video{
+   border:2px solid black;
+   margin :150px 150px 150px 450px;
+   height: 400px;
+  width: 600px;
+   cursor: pointer;
+  
+ }
+p{ 
+    font-family: Arial, Helvetica, sans-serif; 
+    color: deepskyblue;
+    margin-left:100px;
+    margin-right: 100px;
+    background: rgba(0, 0, 0, 0.52);
+    font-style: italic;
+    text-align: center;
+}
+ul{ list-style-type: none;
+    text-decoration:center;
+    top:900px;
+    /*background: rgba(0, 0, 0, 0.52);*/
+    float: right;
+    display: flex;
+    flex-direction: row;
+    margin-right: 100px;
+
+
+}
+a{ text-decoration: none;
+    color:white;
+    /*background: rgba(0, 0, 0, 0.52);*/
+    padding: 0px 20px 0px 20px;
+}
+img{ 
+    width: 40px;
+    height: 40px;
+
+}
+li:hover{
+    
+    color:white;
+    background-color: black;
+    border-radius: 20%;
+}
+.logo{
+    width: 60px;
+    height: 40px;
+}
+.formulaire{
+    float: right;
+    color: black;
+    background: beige;
+    border-radius: 12px;
+    padding: 10px;
+    display: inline-flex;
+    flex-direction: column;
+}
+label{
+    color: black;
+}
+input
+{
+border-radius: 12px;;
+padding: 2px;
+text-shadow: 0;
+}
+article{
+    font-size: 20px;
+    list-style-type: none;
+    margin-left: 20em;
+    /*text-decoration:center;*/
+    top:800px;
+    /*background: rgba(0, 0, 0, 0.52);*/
+    float:center;
+    display: flex;
+    flex-direction: row;
+    /*margin-right: 100px;*/
+}
