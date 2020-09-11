@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Exo 10 JS</title>
+
+    </head>
+    <body>
+        <h1>Exercice 10 : Récapitulons</h1>
+        <p>Le jeu du plus ou moins</p>
+    </body>
+</html>
+<script>
+      var a, b, compteur;
+      compteur = 0;
+      b = Math.floor(Math.random() * 101);
+      console.log("le nombre secret est " + b);
+      while (a != b) {
+          compteur++;
+
+          a = prompt("choisir un nombre ");
+
+
+          if (b == a) {
+              alert("BRAVO ! Nombre d'éssai = " + compteur);
+          } else if (b < a) {
+              alert("Le Nombre Secret est inférieur. Nombre d'éssai = " + compteur);
+          } else {
+              alert("Le Nombre Secret est supérieur. Nombre d'éssai = " + compteur);
+          }
+      }
+  </script>
