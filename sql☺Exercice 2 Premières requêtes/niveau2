@@ -1,0 +1,112 @@
+Premières requêtes SQL
+Commencez par démarrer votre serveur Laragon, puis cliquez sur le bouton "Bases de données" pour
+lancer HeidiSQL.
+HeidiSQL est un outil qui va vous permettre de créer et manipuler vos bases de données, mais aussi
+d'écrire des requêtes sur vos bases de données.
+Cliquez donc sur "Ouvrir" pour ouvrir la session crée par défaut par Laragon.
+Créez une nouvelle base de données (nommez la comme vous voulez), cliquez dessus pour la
+sélectionner, et importez (Fichier -> Exécuter un fichier SQL) les deux fichiers SQL fournis dans
+l'archive.
+Commencez par "departements.sql" puis "villes_france.sql".
+Rafraichissez si besoin l'affichage de HeidiSQL (F5), vous devriez voir deux tables contenant 101
+lignes pour la première et 36700 lignes pour l'autre.
+Cliquez maintenant sur l'onglet "Requête", c'est dans ce cadre de saisie que vous répondrez à toutes
+les questions suivantes. A chaque fois que vous saisirez une requête vous pourrez cliquer soit sur le
+bouton "play" bleu "Execute SQL" soit sur F9 pour tester votre requête. Le résultat s'affichera en
+dessous du cadre de saisie.
+Vous ne pourrez tester qu'une seule requête à la fois. Dès que vous avez réussi à rédiger la bonne
+requête, copiez la pour vous en souvenir dans un fichier à part, et passez à la question suivante.
+Voici les requêtes que vous allez écrire :
+1) Ecrivez la requête permettant d'obtenir la liste des 10 villes les plus peuplées en 2012
+Indice :
+SELECT *
+FROM `villes_france_free`
+ORDER BY ... DESC
+LIMIT ...
+2) Ecrivez la requête permettant d'obtenir la liste des 50 villes ayant la plus faible superficie
+Indice :
+SELECT *
+FROM `villes_france_free`
+ORDER BY ... ASC
+LIMIT ...
+3) Ecrivez la requête permettant d'obtenir la liste des départements d’outre-mer, c’est-à-dire ceux
+dont le numéro de département commence par “97”
+4) Ecrivez la requête permettant d'obtenir le nom des 10 villes les plus peuplées en 2012, ainsi que le
+nom du département associé
+5) Ecrivez la requête permettant d'obtenir la liste du nom de chaque département, associé à son
+code et du nombre de commune au sein de ces départements, en triant afin d’obtenir en priorité les
+départements qui possèdent le plus de communes
+6) Ecrivez la requête permettant d'obtenir la liste des 10 plus grands départements, en terme de
+superficie
+7) Ecrivez la requête permettant de compter le nombre de villes dont le nom commence par “Saint”
+8) Ecrivez la requête permettant d'obtenir la liste des villes qui ont un nom existants plusieurs fois, et
+trier afin d’obtenir en premier celles dont le nom est le plus souvent utilisé par plusieurs communes
+9) Ecrivez la requête permettant d'obtenir en une seule requête SQL la liste des villes dont la
+superficie est supérieure à la superficie moyenne
+10) Ecrivez la requête permettant d'obtenir la liste des départements qui possèdent plus de 2
+millions d’habitants
+
+
+
+
+
+1)SELECT *
+FROM `villes_france_free`
+ORDER BY `ville_population_2012` DESC
+LIMIT 10
+
+
+2)SELECT *
+FROM `villes_france_free`
+ORDER BY `ville_surface` ASC
+LIMIT 50
+
+
+3)SELECT *
+FROM `departement`
+WHERE `departement_code` LIKE '97%'
+
+
+4)SELECT *
+FROM `villes_france_free`
+LEFT JOIN departement ON departement_code = ville_departement
+ORDER BY `ville_population_2012` DESC
+LIMIT 10
+
+
+5)SELECT departement_nom, ville_departement, COUNT(*) AS nbr_items
+FROM `villes_france_free`
+LEFT JOIN departement ON departement_code = ville_departement
+GROUP BY ville_departement
+ORDER BY `nbr_items` DESC
+
+
+6)SELECT departement_nom, ville_departement, SUM(`ville_surface`) AS dpt_surface
+FROM `villes_france_free`
+LEFT JOIN departement ON departement_code = ville_departement
+GROUP BY ville_departement
+ORDER BY dpt_surface  DESC
+LIMIT 10
+
+
+7)SELECT COUNT(*)
+FROM `villes_france_free`
+WHERE `ville_nom` LIKE 'saint%'
+
+
+8)SELECT ville_nom, COUNT(*) AS nbt_item
+FROM `villes_france_free`
+GROUP BY `ville_nom`
+ORDER BY nbt_item DESC
+
+
+9)SELECT *
+FROM `villes_france_free`
+WHERE `ville_surface` > (SELECT AVG(`ville_surface`) FROM `villes_france_free`)
+
+
+10)SELECT ville_departement, SUM(`ville_population_2012`) AS population_2012
+FROM `villes_france_free`
+GROUP BY `ville_departement`
+HAVING population_2012 > 2000000
+ORDER BY population_2012 DESC
