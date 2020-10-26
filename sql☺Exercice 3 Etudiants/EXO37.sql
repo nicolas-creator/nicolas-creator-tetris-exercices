@@ -1,0 +1,1 @@
+SELECT AVG(examen) FROM matricule 

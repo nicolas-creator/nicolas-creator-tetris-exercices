@@ -1,0 +1,1 @@
+SELECT  AVG (note) FROM examen where CODE=002 
